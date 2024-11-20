@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Repuestos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="imgs/icon.PNG">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i><span>Inicio</span></a></li>
+            <li><a href="clientes.html"><i class="fas fa-users"></i><span>Clientes</span></a></li>
+            <li><a href="vehiculos.html"><i class="fas fa-car"></i><span>Vehículos</span></a></li>
+            <li><a href="mecanicos.html"><i class="fas fa-wrench"></i><span>Mecánicos</span></a></li>
+            <li><a href="citas.html"><i class="fas fa-calendar"></i><span>Citas</span></a></li>
+            <li><a href="repuestos.html"><i class="fas fa-cogs"></i><span>Repuestos</span></a></li>
+            <li><a href="servicios.html"><i class="fas fa-tools"></i><span>Servicios</span></a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1><i class="fas fa-cogs"></i> Gestión de Repuestos</h1>
+        </header>
+
+        <div class="dashboard-grid">
+            <section class="form-section">
+                <div class="form-container">
+                    <h2>Nuevo Repuesto</h2>
+                    <form id="repuestoForm">
+                        <div class="input-group">
+                            <i class="fas fa-clipboard"></i>
+                            <input type="text" id="descripcion" placeholder="Descripción" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-building"></i>
+                            <input type="text" id="proveedor" placeholder="Proveedor" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-boxes"></i>
+                            <input type="number" id="stock" placeholder="Stock inicial" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-dollar-sign"></i>
+                            <input type="number" id="precio" placeholder="Precio unitario" required>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-plus"></i> Registrar Repuesto
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="list-section">
+                <h2>Control de Stock</h2>
+                <div class="search-bar">
+                    <input type="text" id="searchRepuesto" placeholder="Buscar repuesto...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div id="listaRepuestos" class="lista-container">
+                    <!-- Las tarjetas de repuestos se generarán aquí dinámicamente -->
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script type="module" src="js/repuestos.js"></script>
+</body>
+</html> 

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Vehículos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="imgs/icon.PNG">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i><span>Inicio</span></a></li>
+            <li><a href="clientes.html"><i class="fas fa-users"></i><span>Clientes</span></a></li>
+            <li><a href="vehiculos.html"><i class="fas fa-car"></i><span>Vehículos</span></a></li>
+            <li><a href="mecanicos.html"><i class="fas fa-wrench"></i><span>Mecánicos</span></a></li>
+            <li><a href="citas.html"><i class="fas fa-calendar"></i><span>Citas</span></a></li>
+            <li><a href="repuestos.html"><i class="fas fa-cogs"></i><span>Repuestos</span></a></li>
+            <li><a href="servicios.html"><i class="fas fa-tools"></i><span>Servicios</span></a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1><i class="fas fa-car"></i> Gestión de Vehículos</h1>
+        </header>
+
+        <div class="dashboard-grid">
+            <section class="form-section">
+                <div class="form-container">
+                    <h2>Nuevo Vehículo</h2>
+                    <form id="vehiculoForm">
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <select id="clienteSelect" required>
+                                <option value="">Seleccione un cliente</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-car"></i>
+                            <input type="text" id="marca" placeholder="Marca" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-car"></i>
+                            <input type="text" id="matricula" placeholder="Matrícula" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-calendar"></i>
+                            <input type="number" id="año" placeholder="Año" required>
+                        </div>
+                        <button type="submit" class="btn-primary">Registrar Vehículo</button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="list-section">
+                <h2>Vehículos Registrados</h2>
+                <div id="listaVehiculos" class="lista-container"></div>
+            </section>
+        </div>
+    </div>
+
+    <script type="module" src="js/vehiculos.js"></script>
+</body>
+</html> 

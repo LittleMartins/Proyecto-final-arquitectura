@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Mecánicos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="imgs/icon.PNG">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i><span>Inicio</span></a></li>
+            <li><a href="clientes.html"><i class="fas fa-users"></i><span>Clientes</span></a></li>
+            <li><a href="vehiculos.html"><i class="fas fa-car"></i><span>Vehículos</span></a></li>
+            <li><a href="mecanicos.html"><i class="fas fa-wrench"></i><span>Mecánicos</span></a></li>
+            <li><a href="citas.html"><i class="fas fa-calendar"></i><span>Citas</span></a></li>
+            <li><a href="repuestos.html"><i class="fas fa-cogs"></i><span>Repuestos</span></a></li>
+            <li><a href="servicios.html"><i class="fas fa-tools"></i><span>Servicios</span></a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1><i class="fas fa-wrench"></i> Gestión de Mecánicos</h1>
+        </header>
+
+        <div class="dashboard-grid">
+            <section class="form-section">
+                <div class="form-container">
+                    <h2>Nuevo Mecánico</h2>
+                    <form id="mecanicoForm">
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="nombre" placeholder="Nombre" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="apellido" placeholder="Apellido" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-tools"></i>
+                            <input type="text" id="especialidad" placeholder="Especialidad" required>
+                        </div>
+                        <div class="input-group">
+                            <i class="fas fa-clock"></i>
+                            <select id="disponibilidad" required>
+                                <option value="">Seleccione disponibilidad</option>
+                                <option value="disponible">Disponible</option>
+                                <option value="ocupado">Ocupado</option>
+                                <option value="ausente">Ausente</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-plus"></i> Registrar Mecánico
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="list-section">
+                <h2>Mecánicos Registrados</h2>
+                <div class="search-bar">
+                    <input type="text" id="searchMecanico" placeholder="Buscar mecánico...">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div id="listaMecanicos" class="lista-container">
+                    <!-- Las tarjetas de mecánicos se generarán aquí dinámicamente -->
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script type="module" src="js/mecanicos.js"></script>
+</body>
+</html> 
